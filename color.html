@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        <span> r:<input type="range" minlength="0" maxlength="255" v-model="r" /></span><br />
+        <span>g:<input type="range" minlength="0" maxlength="255" v-model="g" /></span><br />
+        <span>b:<input type="range" minlength="0" maxlength="255" v-model="b" /></span><br />
+        <span>w:<input type="number" v-model="w" /></span><br />
+        <span>h:<input type="number" v-model="h" /></span><br />
+        <div :style='{"width":w+"px","height":h+"px","background":"rgb("+r+","+g+","+b+")"}'>test</div>
+    </div>
+    
+    <script>
+        var vm = new Vue({
+            el:"#box",
+            data:{
+                r:0,
+                g:0,
+                b:0,
+                w:100,
+                h:100
+            }
+        })
+    </script>
+</body>
+</html>
