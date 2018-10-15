@@ -1,2 +1,5 @@
 # vue_color
-demo vue_v-bind
+demo vue
+v-bind
+color编辑
+设置宽高
